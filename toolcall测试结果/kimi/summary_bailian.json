@@ -1,0 +1,11 @@
+{
+    "model": "Moonshot-Kimi-K2-Instruct",
+    "success_count": 199,
+    "failure_count": 1,
+    "finish_stop": 132,
+    "finish_tool_calls": 67,
+    "finish_others": 0,
+    "finish_others_detail": {},
+    "schema_validation_error_count": 34,
+    "successful_tool_call_count": 33
+}

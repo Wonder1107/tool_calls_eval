@@ -1,0 +1,11 @@
+{
+    "model": "kimi-k2-250905",
+    "success_count": 200,
+    "failure_count": 0,
+    "finish_stop": 131,
+    "finish_tool_calls": 69,
+    "finish_others": 0,
+    "finish_others_detail": {},
+    "schema_validation_error_count": 23,
+    "successful_tool_call_count": 46
+}

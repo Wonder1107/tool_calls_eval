@@ -1,0 +1,13 @@
+{
+    "model": "kimi-k2-instruct",
+    "success_count": 170,
+    "failure_count": 30,
+    "finish_stop": 111,
+    "finish_tool_calls": 56,
+    "finish_others": 3,
+    "finish_others_detail": {
+        "sensitive": 3
+    },
+    "schema_validation_error_count": 0,
+    "successful_tool_call_count": 56
+}

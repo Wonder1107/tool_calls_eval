@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "TP": 46,
+    "FP": 19,
+    "FN": 13,
+    "TN": 122,
+    "total": 200
+  },
+  "metrics": {
+    "tool_call_precision": 0.707692,
+    "tool_call_recall": 0.779661,
+    "model_official_similarity": 0.741935
+  },
+  "definition": {
+    "positive_label": "finish_reason == 'tool_calls'",
+    "ground_truth": "official_api",
+    "source": "response.choices[0].finish_reason"
+  }
+}

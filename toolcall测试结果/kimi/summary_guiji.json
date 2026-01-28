@@ -1,0 +1,13 @@
+{
+    "model": "Pro/moonshotai/Kimi-K2-Instruct-0905",
+    "success_count": 200,
+    "failure_count": 0,
+    "finish_stop": 140,
+    "finish_tool_calls": 43,
+    "finish_others": 17,
+    "finish_others_detail": {
+        "unexpected_state": 17
+    },
+    "schema_validation_error_count": 0,
+    "successful_tool_call_count": 43
+}

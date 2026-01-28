@@ -1,0 +1,184 @@
+// 结果
+{
+  "data_index": 1357,
+  "request": {
+    "model": "kimi-k2-0905-preview",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are Kimi, an AI assistant developed by Moonshot AI.\n\nWhen faced with logic problems such as comparisons or counting, think step by step before answering.\n\nToday is: September 24, 2025, Wednesday"
+      },
+      {
+        "role": "user",
+        "content": "Help me type this website: 520134.com"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll help you access this website.",
+        "tool_calls": [
+          {
+            "index": 0,
+            "id": "functions.urls_fetch_tool:0",
+            "type": "function",
+            "function": {
+              "name": "urls_fetch_tool",
+              "arguments": "{\"urls\": [\"https://520134.com\"]}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": "URL: https://520134.com\nTitle: Because I Love You – 520134.com\nContent:\n- Home\n- Little Quiz\n- Confession Wall\n- Rainbow Praise\n- An Invitation Letter\n- Site still under construction...\n- About Us\n\n2025.5.5\n\n## Love you\n\n## Forever\n\nYou have every look I love.\n--- Jay Chou, \"Sweet\"\n\n## Love Is The Flame Of Life\nwithout it, everything becomes dark.\n\nLove is the throb of first sight, the eternal poetry and undying passion, fingers laced together, only you, a promise written to last until the end of time.\n\nMay all lovers in the world become spouses; it is fate from past lives—do not let this bond slip by.",
+        "tool_call_id": "functions.urls_fetch_tool:0"
+      },
+      {
+        "role": "assistant",
+        "content": "The site is already open—a rather romantic confession-themed page called **\"Because I Love You – 520134.com.\"**\n\nIt’s clean and simple: Home, Little Quiz, Confession Wall, Rainbow Praise, an Invitation Letter, though still under construction. At the bottom sits a gentle line quoting Jay Chou’s “Sweet”:\n\n> “Every trait I like—you have them all.”\n\nAnd an English sentence:\n\n> **“Love Is The Flame Of Life”**  \n> *without it, everything becomes dark.*\n\nThe whole vibe is cozy, like a tiny corner made for couples or heartfelt declarations. If you want to dig deeper—say, the quiz or the confession wall—I can open those for you too."
+      },
+      {
+        "role": "user",
+        "content": "520435.com"
+      }
+    ],
+    "max_tokens": 16000,
+    "temperature": 0.6,
+    "stream": true,
+    "user": "aaaaaaaaaaaaaaaaaaa",
+    "tools": [
+      {
+        "function": {
+          "name": "search",
+          "description": "搜索若干个(最多不超过5个)queries\n注意 search 返回的是“所有 url 上匹配度最高的几个片段”，所以信息量有可能是不完全的",
+          "parameters": {
+            "properties": {
+              "queries": {
+                "description": "需要搜索的所有queries",
+                "items": { "type": "string" },
+                "type": "array"
+              }
+            },
+            "required": ["queries"],
+            "type": "object"
+          }
+        },
+        "type": "function"
+      },
+      {
+        "function": {
+          "name": "urls_fetch_tool",
+          "description": "Fetches URLs from the internet and extracts its contents as markdown. Notice: only call this tool when user provided urls or has Clear Intention to read url contents.",
+          "parameters": {
+            "properties": {
+              "urls": { "description": "URLs to fetch. Max 10 Urls.", "type": "array" }
+            },
+            "required": ["urls"],
+            "type": "object"
+          }
+        },
+        "type": "function"
+      }
+    ]
+  },
+  "response": {
+    "id": "chatcmpl-69673e180708bac1911900b7",
+    "object": "chat.completion",
+    "created": 1768373785,
+    "model": "kimi-k2-0905-preview",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "I'll help you access this website.",
+          "tool_calls": [
+            {
+              "id": "urls_fetch_tool:1",
+              "type": "function",
+              "function": {
+                "name": "urls_fetch_tool",
+                "arguments": "{\"urls\": [\"https://520435.com\"]}"
+              }
+            }
+          ]
+        },
+        "finish_reason": "tool_calls"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 562,
+      "completion_tokens": 29,
+      "total_tokens": 591
+    }
+  },
+  "status": "success",
+  "finish_reason": "tool_calls",
+  "tool_calls_valid": true,
+  "last_run_at": "2026-01-14T14:56:23.739104",
+  "duration_ms": 3578,
+  "hash": "84d4c4ac98544ade3ce7c5c6a0c892df"
+}
+
+// 测试
+{
+  "model": "kimi-k2-0905-preview",
+  "user": "aaaaaaaaaaaaaaaaaaa",
+  "max_tokens": 16000,
+  "temperature": 0.6,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Kimi, an AI assistant developed by Moonshot AI.\n\nWhen faced with logic problems such as comparisons or counting, think step by step before answering.\n\nToday is: September 24, 2025, Wednesday"
+    },
+    {
+      "role": "user",
+      "content": "Help me type this website: 520134.com"
+    },
+    {
+      "role": "assistant",
+      "content": "I'll help you access this website.",
+      "tool_calls": [
+        {
+          "index": 0,
+          "id": "functions.urls_fetch_tool:0",
+          "type": "function",
+          "function": {
+            "name": "urls_fetch_tool",
+            "arguments": {
+              "urls": ["https://520134.com"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": "URL: https://520134.com\nTitle: Because I Love You – 520134.com\nContent:\n- Home\n- Little Quiz\n- Confession Wall\n- Rainbow Praise\n- An Invitation Letter\n- Site still under construction...\n- About Us\n\n2025.5.5\n\n## Love you\n## Forever\nYou have every look I love.\n--- Jay Chou, \"Sweet\"\n\n## Love Is The Flame Of Life\nwithout it, everything becomes dark.\n\nLove is the throb of first sight, the eternal poetry and undying passion, fingers laced together, only you, a promise written to last until the end of time.\n\nMay all lovers in the world become spouses; it is fate from past lives—do not let this bond slip by.",
+      "tool_call_id": "functions.urls_fetch_tool:0"
+    },
+    {
+      "role": "assistant",
+      "content": "The site is already open—a rather romantic confession-themed page called **\"Because I Love You – 520134.com.\"**\n\nIt’s clean and simple: Home, Little Quiz, Confession Wall, Rainbow Praise, an Invitation Letter, though still under construction. At the bottom sits a gentle line quoting Jay Chou’s “Sweet”:\n\n> “Every trait I like—you have them all.”\n\nAnd an English sentence:\n\n> **“Love Is The Flame Of Life”**  \n> *without it, everything becomes dark.*\n\nThe whole vibe is cozy, like a tiny corner made for couples or heartfelt declarations. If you want to dig deeper—say, the quiz or the confession wall—I can open those for you too."
+    },
+    {
+      "role": "user",
+      "content": "520435.com"
+    }
+  ],
+  "tools": [
+    {
+      "name": "search",
+      "description": "搜索若干个(最多不超过5个)queries\n注意 search 返回的是“所有 url 上匹配度最高的几个片段”，所以信息量有可能是不完全的",
+      "parameters": {
+        "queries": []
+      }
+    },
+    {
+      "name": "urls_fetch_tool",
+      "description": "Fetches URLs from the internet and extracts its contents as markdown. Notice: only call this tool when user provided urls or has Clear Intention to read url contents.",
+      "parameters": {
+        "urls": []
+      }
+    }
+  ]
+}

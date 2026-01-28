@@ -1,0 +1,11 @@
+{
+    "model": "deepseek-v3-2-251201",
+    "success_count": 0,
+    "failure_count": 0,
+    "finish_stop": 0,
+    "finish_tool_calls": 0,
+    "finish_others": 0,
+    "finish_others_detail": {},
+    "schema_validation_error_count": 0,
+    "successful_tool_call_count": 0
+}
